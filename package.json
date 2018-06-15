@@ -9,14 +9,16 @@
   "scripts": {
     "server": "micro",
     "dev": "micro-dev",
-    "start": "npm run $(node -p \"process.env.NODE_ENV === 'production' ? 'server' : 'dev'\")"
+    "start": "npm run $(node -p \"process.env.NODE_ENV === 'production' ? 'server' : 'dev'\")",
+    "deploy": "now alias $(now -e SLACK_BOT_TOKEN=@dock-slackbot-token -e SLACK_CLIENT_ID=@dock-slack-client-id -e SLACK_CLIENT_SECRET=@dock-slack-client-secret -e NOW_TOKEN=@dock-now-token -e HOOK_TOKEN=@dock-hook-token) dock"
   },
   "dependencies": {
     "@std/esm": "^0.2.1",
     "async-to-gen": "^1.3.3",
     "fs-route": "^1.0.2",
     "micro": "^8.0.4",
-    "now": "^11.2.4"
+    "now": "^11.2.4",
+    "slack": "^11.0.0"
   },
   "devDependencies": {
     "micro-dev": "^3.0.0"
