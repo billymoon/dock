@@ -1,12 +1,12 @@
-import { exec } from 'child_process'
+let exec;_4c6‍.w('child_process',[["exec",function(v){exec=v}]]);let send,json;_4c6‍.w('micro',[["send",function(v){send=v}],["json",function(v){json=v}]]);let message;_4c6‍.w('../slack',[["message",function(v){message=v}]]);
 
-import { send, json } from 'micro'
 
-import { message } from '../slack'
+
+
 
 const nowToken = process.env.NOW_TOKEN
 
-export default async (req, res, { query: { repo, token, alias } }) => {
+_4c6‍.d(async (req, res, { query: { repo, token, alias } }) => {
   const nowDeployHandler = async url => {
     console.log(`Deployed to: ${url}`)
 
@@ -50,4 +50,4 @@ export default async (req, res, { query: { repo, token, alias } }) => {
     message(`deploy failed (malformed) for ${alias}`)
     send(res, 400)
   }
-}
+});

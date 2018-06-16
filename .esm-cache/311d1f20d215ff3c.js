@@ -1,7 +1,7 @@
-import { exec } from 'child_process'
-import { send } from 'micro'
+let exec;_d21‍.w('child_process',[["exec",function(v){exec=v}]]);let send;_d21‍.w('micro',[["send",function(v){send=v}]]);
 
-export default async (req, res, { query: { repo, token, alias } }) => {
+
+_d21‍.d(async (req, res, { query: { repo, token, alias } }) => {
   if (token === process.env.HOOK_TOKEN && /^\w+\/\w+$/.test(repo) && /^[a-zA-Z0-9.-]+$/.test(alias)) {
     send(res, 200)
 
@@ -17,4 +17,4 @@ export default async (req, res, { query: { repo, token, alias } }) => {
   } else {
     send(res, 400)
   }
-}
+});
