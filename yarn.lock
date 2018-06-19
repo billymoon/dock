@@ -1323,6 +1323,12 @@ signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
+slack@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/slack/-/slack-11.0.0.tgz#3fb4c5b826d8d7e98a5d81ac65958b1e3de53f26"
+  dependencies:
+    tiny-json-http "^7.0.0"
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -1460,6 +1466,10 @@ term-size@^1.2.0:
   resolved "https://registry.yarnpkg.com/term-size/-/term-size-1.2.0.tgz#458b83887f288fc56d6fffbfad262e26638efa69"
   dependencies:
     execa "^0.7.0"
+
+tiny-json-http@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/tiny-json-http/-/tiny-json-http-7.0.0.tgz#1b1240efa591cd0faa5845f844694e79563ac2a2"
 
 to-object-path@^0.3.0:
   version "0.3.0"

@@ -8,13 +8,14 @@
   "main": "index.js",
   "scripts": {
     "server": "micro",
-    "dev": "NOW_TOKEN=now-token micro-dev",
+    "dev": "micro-dev",
     "start": "npm run $(node -p \"process.env.NODE_ENV === 'production' ? 'server' : 'dev'\")",
-    "deploy": "now -e NOW_TOKEN=@dock-now-token -e HOOK_TOKEN=@dock-hook-token"
+    "deploy": "now -e DOCK_SECRETS=@dock-secrets -e HOOK_TOKEN=@dock-hook-token"
   },
   "dependencies": {
     "micro": "^8.0.4",
-    "now": "^11.2.4"
+    "now": "^11.2.4",
+    "slack": "^11.0.0"
   },
   "devDependencies": {
     "micro-dev": "^3.0.0"
